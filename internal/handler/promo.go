@@ -105,6 +105,7 @@ func (h *PromoHandler) Generate(
 	}
 
 	cfg := config.Load()
+	// no cfg.Validate() check here because it was already validated in main.go
 
 	writeJSON(
 		w,

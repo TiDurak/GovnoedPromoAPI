@@ -32,6 +32,7 @@ func (s *PromoService) GenerateKey(
 	discordID int64,
 ) (string, error) {
 	cfg := config.Load()
+	// no cfg.Validate() check here because it was already validated in main.go
 	rewardAmount := cfg.PromoReward
 	key, err := generateKey()
 
