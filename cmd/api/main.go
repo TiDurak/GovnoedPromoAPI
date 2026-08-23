@@ -59,7 +59,7 @@ func main() {
 	mux.HandleFunc("/api/health", healthHandler.Handle)
 	mux.HandleFunc("/api/promo/generate", promoHandler.Generate)
 
-	address := ":" + cfg.HTTPPort
+	address := cfg.HTTPAddress + ":" + cfg.HTTPPort
 
 	log.Printf("API listening on %s", address)
 

@@ -6,6 +6,7 @@ import (
 )
 
 type Config struct {
+	HTTPAddress  string
 	HTTPPort     string
 	DatabasePath string
 
@@ -17,7 +18,8 @@ type Config struct {
 
 func Load() Config {
 	return Config{
-		HTTPPort: "8080",
+		HTTPAddress: "127.0.0.1",
+		HTTPPort:    "8080",
 
 		DatabasePath: getEnv("PROMO_DATABASE_PATH", "./data/database.db"),
 
