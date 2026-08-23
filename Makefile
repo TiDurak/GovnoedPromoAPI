@@ -2,7 +2,7 @@ APP_NAME := govnoed-api
 BIN_DIR := bin
 CMD_PATH := ./cmd/api
 
-.PHONY: build run clean
+.PHONY: build run check clean
 
 build:
 	go build -o $(BIN_DIR)/$(APP_NAME) $(CMD_PATH)
@@ -10,5 +10,10 @@ build:
 run:
 	go run $(CMD_PATH)
 
-clean:
-	rm -f $(BIN_DIR)/$(APP_NAME)
+check:
+	go vet ./...
+
+deploy:
+	go vet ./...
+	go build -o $(BIN_DIR)/$(APP_NAME) $(CMD_PATH)
+	sudo systemctl restart govnoed-api
