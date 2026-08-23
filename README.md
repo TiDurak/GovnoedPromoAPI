@@ -20,12 +20,7 @@ The API uses an external SQLite database, communicates with the website through 
 
 ## Project Status
 
-The project is in its early stages. The basic application structure and configuration are currently in place. The core API functionality, database integration, and promo code generation are under development.
-
-
-## TODO
-
-- Get api request, then work with database and return api response
+The project is in its final stage. Future bug fixes and other minor fixes may still be made.
 
 
 ## FAQ
